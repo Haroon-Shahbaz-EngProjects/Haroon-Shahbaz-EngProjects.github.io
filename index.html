@@ -1,50 +1,60 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Haroon Shahbaz — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-  <div class="marquee">
-    <span>Welcome to my Website!!</span>
-  </div>
-</header>
+    <div class="nav container">
+      <div class="brand">Haroon<span class="dot">.</span></div>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero center container">
+    <div class="kicker">Hello, I'm</div>
+    <h1>Haroon Shahbaz</h1>
+    <div class="subtitle">Security‑minded Software Engineer · Go, Rust, Python · Embedded & Data</div>
+    <div class="actions">
+      <a class="btn ghost" href="Resume_Haroon_Shahabaz.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn primary" href="mailto:haroon@example.com">Let’s Talk</a>
+    </div>
 
-  <section class="profile-section" id="about">
-    <img src="profile.jpg" alt="Your Photo">
-    <div class="profile-text">
-      <h2>Haroon Shahbaz</h2>
+    <div class="arch">
+      <img class="avatar" src="portrait.jpg" alt="Portrait of Haroon Shahbaz">
+    </div>
 
-      <div class="education">
-        <strong>Education:</strong>
-        <ul>
-          <li>Bachelor of Engineering in Computer Engineering</li>
-          <li>University of Guelph September 2021 - April 2026</li>
-        </ul>
-      </div>
-
-      <div class="social-links">
-        <a href="#">🌐</a>
-        <a href="#">💼</a>
-        <a href="#">✉️</a>
-      </div>
     </div>
   </section>
 
-  <section class="learn-more">
-    <h3>Learn more about me :p</h3>
-    <div class="box-grid">
-      <a href="about.html">About Me</a>
-      <a class="dark" href="skills.html">Skills</a>
-      <a class="dark" href="projects.html">Projects</a>
-      <a class="dark" href="experience.html">Work Experience</a>
-      <a class="dark" href="resume.html">Resume</a>
-    </div>
-  </section>
+  <aside class="social-rail">
+    <a href="https://www.linkedin.com" aria-label="LinkedIn">in</a>
+    <a href="https://github.com" aria-label="GitHub">GH</a>
+    <a href="#" aria-label="Blog">B</a>
+    <a href="mailto:haroon@example.com" aria-label="Email">@</a>
+    <div class="line"></div>
+  </aside>
+
+  <nav class="dock">
+    <a href="index.html" class="active" title="Home">⌂</a>
+    <a href="about.html" title="About">☺</a>
+    <a href="projects.html" title="Projects">▦</a>
+    <a href="experience.html" title="Experience">◆</a>
+    <a href="skills.html" title="Skills">⚙</a>
+  </nav>
+
+  <div class="vhint">Scroll Down</div>
 
   <footer>
     <p>© 2025 Haroon Shahbaz</p>
