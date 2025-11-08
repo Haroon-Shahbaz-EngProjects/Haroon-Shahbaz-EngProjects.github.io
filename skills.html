@@ -4,21 +4,141 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wrap{max-width:1000px;margin:32px auto;padding:0 16px;}
+    .lead{color:#4b5563;margin:4px 0 18px;line-height:1.55;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:16px 18px;}
+    .card h3{margin-top:0;margin-bottom:8px;font-size:1.1rem;}
+    .pill{display:inline-block;margin:4px 6px 0 0;padding:6px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#f9fafb;font-size:.92rem;}
+    .meta{color:#6b7280;font-size:.95rem;margin-top:6px;}
+    .bullets{margin:6px 0 0 18px;line-height:1.6;}
+    .bullets li{margin-bottom:6px;}
+    header h1{padding:16px;}
+  </style>
 </head>
 <body>
   <header>
     <h1>Skills</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html" aria-current="page">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="resume.html">Resume</a>
+    </nav>
   </header>
-  <main style="padding:40px; max-width:800px; margin:auto;">
+
+  <main class="wrap">
     <h2>Technical Skills</h2>
-    <ul>
-      <li>Programming Languages: C++, Python, Java</li>
-      <li>Web Development: HTML, CSS, JavaScript</li>
-      <li>Tools: Git, Linux, OMNeT++</li>
-      <li>Concepts: Data Structures, Networks, Embedded Systems</li>
-    </ul>
+    <p class="lead">A cross‑disciplinary toolset spanning backend/security engineering, embedded systems, and data analytics. Selected highlights below reflect technologies I&apos;ve used to ship production systems, tune detections, and accelerate hardware‑software projects.</p>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Programming Languages</h3>
+        <div>
+          <span class="pill">Python</span>
+          <span class="pill">Go (Golang)</span>
+          <span class="pill">Rust</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">Java</span>
+          <span class="pill">Kotlin</span>
+          <span class="pill">SQL</span>
+          <span class="pill">MATLAB</span>
+          <span class="pill">VHDL/Verilog</span>
+        </div>
+        <ul class="bullets">
+          <li>Python & Go used for production services, log analysis, CI tooling, and detection rule automation.</li>
+          <li>Rust/C++ for performance‑sensitive components and systems interfaces.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Security & DevOps</h3>
+        <div>
+          <span class="pill">Splunk</span>
+          <span class="pill">Sigma (YAML)</span>
+          <span class="pill">Sysmon</span>
+          <span class="pill">Wazuh / NXLog</span>
+          <span class="pill">Linux (systemd, journald)</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Kubernetes</span>
+          <span class="pill">OpenTelemetry</span>
+          <span class="pill">Prometheus / Grafana</span>
+          <span class="pill">GitHub Actions</span>
+        </div>
+        <ul class="bullets">
+          <li>Built a coverage validation framework reaching <strong>~99% log coverage</strong> across host/network telemetry.</li>
+          <li>Authored & maintained <strong>100+ Sigma detections</strong> with automated linting, tests, and FP tuning.</li>
+          <li>Replaced parts of a Wazuh/NXLog stack with a Linux‑native collector to simplify fleet ops.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Backend Platforms</h3>
+        <div>
+          <span class="pill">gRPC/HTTP</span>
+          <span class="pill">JSON/Protobuf</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Redis</span>
+          <span class="pill">Kafka (concepts)</span>
+        </div>
+        <ul class="bullets">
+          <li>Implemented ingestion/normalization services for endpoint events with health checks and tracing.</li>
+          <li>Wrote runbooks/alerts; improved on‑call triage and service reliability.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Embedded & Hardware</h3>
+        <div>
+          <span class="pill">FPGA (Vivado, Nexys A7‑100T)</span>
+          <span class="pill">MicroBlaze</span>
+          <span class="pill">STM32 (uC/OS‑III, FreeRTOS)</span>
+          <span class="pill">UART/I²C/SPI</span>
+          <span class="pill">XADC / SysMon</span>
+        </div>
+        <ul class="bullets">
+          <li>Designed dual‑MicroBlaze systems, XADC‑based temperature sensing, and RTOS task pipelines.</li>
+          <li>Built sensor/actuator control loops and real‑time lab systems for course projects.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Data & Analytics</h3>
+        <div>
+          <span class="pill">Pandas / NumPy</span>
+          <span class="pill">MATLAB / Simulink</span>
+          <span class="pill">ETL & Data Quality</span>
+          <span class="pill">Visualization (Matplotlib)</span>
+        </div>
+        <ul class="bullets">
+          <li>Linked wafer‑level measurements to die performance via a process‑aware schema and ETL jobs.</li>
+          <li>Built regression models that improved micro‑LED harvesting accuracy by <strong>~50%</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Collaboration & Impact</h3>
+        <div>
+          <span class="pill">Runbooks & Playbooks</span>
+          <span class="pill">Incident Response</span>
+          <span class="pill">Agile Sprints</span>
+          <span class="pill">Technical Documentation</span>
+        </div>
+        <ul class="bullets">
+          <li>Reduced MTTR through clearer playbooks, alert hygiene, and post‑incident reviews.</li>
+          <li>Partnered with analysts and engineers to move detections from idea → tested → tuned → deployed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 style="margin-top:28px;">Tooling Snapshot</h2>
+    <p class="meta">Regularly work in: Git, Linux CLI, VS Code, JetBrains, Jupyter, Wireshark, Zeek/Suricata, PCAP/flow analysis, Make/CMake.</p>
   </main>
+
   <footer>
     <p>© 2025 Haroon Shahbaz</p>
   </footer>

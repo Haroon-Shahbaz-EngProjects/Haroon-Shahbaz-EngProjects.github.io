@@ -5,18 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Work Experience</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .wrap{max-width:1000px;margin:32px auto;padding:0 16px;}
+    .xp-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin:18px 0;overflow:hidden;}
+    .xp-head{padding:16px 18px;border-bottom:1px solid #f1f5f9;}
+    .xp-head h2{margin:0;font-size:1.25rem;}
+    .meta{display:flex;gap:12px;color:#6b7280;font-size:.95rem;margin-top:6px;flex-wrap:wrap;}
+    .xp-body{padding:16px 18px;line-height:1.6;}
+    .xp-body ul{margin:0 0 12px 20px;}
+    .tools{color:#6b7280;font-size:.95rem;}
+    header h1{padding:16px;}
+  </style>
 </head>
 <body>
   <header>
     <h1>Work Experience</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html" aria-current="page">Experience</a>
+      <a href="resume.html">Resume</a>
+    </nav>
   </header>
-  <main style="padding:40px; max-width:800px; margin:auto;">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Internship:</strong> Software Development Intern at [Company], contributed to backend systems and debugging tools.</li>
-      <li><strong>Research:</strong> Assisted with AI/ML research projects at university.</li>
-    </ul>
+
+  <main class="wrap">
+    <section>
+      <!-- Software Engineer - Arctic Wolf -->
+      <article class="xp-card">
+        <div class="xp-head">
+          <h2>Software Engineer — Rust, Golang, Linux, Wazuh</h2>
+          <div class="meta">
+            <span>Arctic Wolf · Waterloo, ON</span>
+            <span>May 2025 — Dec 2025</span>
+          </div>
+        </div>
+        <div class="xp-body">
+          <p><strong>Scope:</strong> Backend platform work in Go/Rust, endpoint telemetry ingestion, Linux-based log collection, and on-call DevOps support for high-availability services.</p>
+          <ul>
+            <li><strong>Aurora agent integration:</strong> Contributed to integrating BlackBerry’s Aurora Endpoint Agent telemetry into the backend ingestion layer. Implemented Go services for parsing, normalizing, and enriching endpoint events; profiled hot paths and introduced batching/back-pressure to reduce p99 ingestion latency under burst.</li>
+            <li><strong>Linux log collection revamp:</strong> Designed and deployed a Linux-native collection stack replacing Wazuh + NXLog for targeted fleet segments. Built systemd-managed collectors with robust retry/queuing, secure TLS shipping, and structured logging (JSON), simplifying fleet configuration and cutting agent footprint/operational overhead.</li>
+            <li><strong>Compliance & investigations:</strong> Participated in security investigations and compliance assessments for the Win32 Agent in support of CMMC readiness; authored evidence, hardened config baselines, and validated controls coverage across logging, tamper protection, and update channels.</li>
+            <li><strong>Operability & SRE hygiene:</strong> Added health checks, metrics, and structured tracing to new services; wrote runbooks and alert rules to speed triage. On-call for DevOps incidents: diagnosed pipeline backlogs, misconfigurations, and resource contention; executed mitigations and post-incident reviews to prevent recurrence.</li>
+          </ul>
+          <p class="tools"><em>Tech:</em> Go (Golang), Rust (select components), Linux (systemd, journald), gRPC/HTTP, TLS, Wazuh/NXLog migration, Docker, Kubernetes, Grafana/Prometheus, OpenTelemetry, GitHub Actions.</p>
+        </div>
+      </article>
+
+      <!-- Security Engineer - Arctic Wolf -->
+      <article class="xp-card">
+        <div class="xp-head">
+          <h2>Security Engineer — SIEM (Splunk, Sigma), Python, YAML, Sysmon</h2>
+          <div class="meta">
+            <span>Arctic Wolf · Waterloo, ON</span>
+            <span>Jan 2024 — Sep 2024</span>
+          </div>
+        </div>
+        <div class="xp-body">
+          <p><strong>Scope:</strong> Detection engineering and validation across Windows audit/Sysmon + network telemetry, SIEM content lifecycle, and incident response support.</p>
+          <ul>
+            <li><strong>Coverage validation framework:</strong> Engineered a Python toolchain to compare host and network events against SIEM onboarding and parsing rules, achieving <strong>~99% log coverage validation</strong>. Automated detection-gap surfacing and created dashboards for content owners to track remediation.</li>
+            <li><strong>Detection content at scale:</strong> Authored and maintained <strong>100+ Sigma rules</strong> with Python-based CI to enforce schema linting, field mappings, test data generation, and false-positive triage. Tuned thresholds and added suppression logic to balance fidelity vs. noise.</li>
+            <li><strong>Network threat detections:</strong> Implemented IDS/SIEM correlations for suspicious traffic (C2 beacons, lateral movement indicators, abnormal port use). Assisted analysts during live investigations—pivoting across PCAPs, Flow, and DNS to confirm scope and contain activity.</li>
+            <li><strong>Threat research & hardening:</strong> Researched exploit-kit and scan behaviors; recommended firewall rule updates and IDS signatures. Documented playbooks/runbooks to standardize investigation steps and reduce MTTR.</li>
+          </ul>
+          <p class="tools"><em>Tech:</em> Splunk (search/macros), Sigma (YAML), Python, Sysmon, Windows Eventing, Zeek/Suricata, Git, Linux toolchain, CI/CD for content validation.</p>
+        </div>
+      </article>
+
+      <!-- Data Engineer - VueReal -->
+      <article class="xp-card">
+        <div class="xp-head">
+          <h2>Data Engineer — Python, SQL, Digital Signal Processing, MATLAB/Simulink</h2>
+          <div class="meta">
+            <span>VUEREAL · Waterloo, ON</span>
+            <span>Apr 2022 — Aug 2022</span>
+          </div>
+        </div>
+        <div class="xp-body">
+          <p><strong>Scope:</strong> Manufacturing analytics for micro‑LED production—linking epitaxial wafer characterization to die‑level performance to improve harvest yield and process feedback.</p>
+          <ul>
+            <li><strong>Process‑aware data model:</strong> Designed a relational schema and ETL jobs to unify wafer‑level measurements (PL, I‑V, uniformity) with die test results and lot metadata. Added data‑quality checks and lineage to speed debug cycles for process engineers.</li>
+            <li><strong>Analytics pipeline:</strong> Built Python pipelines (Pandas, NumPy) to aggregate features across wafers/dies and surface drift/anomalies. Automated reports improved lot‑release decisions and reduced manual spreadsheet work.</li>
+            <li><strong>Predictive modeling:</strong> Trained a linear‑regression baseline to estimate die‑level yields from upstream wafer characteristics, improving harvesting accuracy by <strong>~50%</strong> vs. prior heuristic rules and accelerating hand‑off to production.</li>
+            <li><strong>DSP & simulation:</strong> Used MATLAB/Simulink for signal processing on characterization traces, smoothing noise and extracting features (e.g., slope/threshold metrics) that fed into the regression model.</li>
+          </ul>
+          <p class="tools"><em>Tech:</em> Python (Pandas/NumPy), SQL, MATLAB/Simulink, versioned ETL, data validation, visualization (Matplotlib), Jupyter.</p>
+        </div>
+      </article>
+    </section>
   </main>
+
   <footer>
     <p>© 2025 Haroon Shahbaz</p>
   </footer>
