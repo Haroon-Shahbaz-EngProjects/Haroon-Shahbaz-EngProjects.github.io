@@ -1,26 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='style.css' />
 </head>
 <body>
   <header>
-    <h1>Projects</h1>
+    <div class='nav container'>
+      <div class='brand'>Haroon<span class='dot'>.</span></div>
+      <nav>
+        <a href='index.html'>Home</a>
+        <a href='about.html'>About</a>
+        <a href='skills.html'>Skills</a>
+        <a href='projects.html' aria-current='page'>Projects</a>
+        <a href='experience.html'>Experience</a>
+        <a href='resume.html'>Resume</a>
+      </nav>
+    </div>
   </header>
-  <main style="padding:40px; max-width:900px; margin:auto;">
-    <h2>Highlighted Projects</h2>
-    <article>
-      <h3>Fall Detection Device</h3>
-      <p>A wearable system for elderly users using wireless sensor networks to detect falls and send alerts via WiFi.</p>
-    </article>
-    <article>
-      <h3>OMNeT++ Network Simulation</h3>
-      <p>Developed network nodes tracking message generation, transmission, and reception for simulation-based analysis.</p>
-    </article>
+
+  <main class='wrap'>
+    <h1>Projects</h1>
+    <p style='color:var(--muted); margin-top:-6px;'>A few highlights that show my range across security, embedded, and automation.</p>
+
+    <div class='card'>
+      <h2>Automated Build System & Testing Framework</h2>
+      <p style='color:var(--muted); margin-top:-6px;'><strong>Python, Linux, Bash</strong> · Apr 2025 - Mar 2025</p>
+      <ul>
+        <li>Architected a Python automation framework with 15+ modular tools for monitoring, validation testing, and automated QA utilities.</li>
+        <li>Implemented centralized build orchestration with activity logging, standardized interfaces, and CI-friendly structure to scale new tools quickly.</li>
+        <li>Improved repeatability by turning manual validation steps into scripted checks and reusable test harnesses.</li>
+      </ul>
+    </div>
+
+    <div class='card'>
+      <h2>Fall Detection Device</h2>
+      <p style='color:var(--muted); margin-top:-6px;'><strong>C/C++, ESP32, WiFi, Embedded</strong> · Jan 2025 - Mar 2025</p>
+      <ul>
+        <li>Built an ESP32 wearable fall detection system using MMA8452Q accelerometer data and real-time vector thresholding to detect fall events.</li>
+        <li>Implemented WiFi TCP/IP transmission to a remote server for instant alerts and caregiver dashboard integration.</li>
+        <li>Added reliable manual emergency input via hardware debouncing and an on-device audible/visual alarm state machine.</li>
+      </ul>
+    </div>
+
+    <div class='card'>
+      <h2>OMNeT++ Network Simulation</h2>
+      <p style='color:var(--muted); margin-top:-6px;'><strong>C++, Simulation</strong></p>
+      <ul>
+        <li>Developed simulated nodes that track message generation, transmission, forwarding, and reception to quantify network behavior.</li>
+        <li>Added end-of-sim summaries for per-node statistics to support performance comparisons and debugging.</li>
+      </ul>
+    </div>
   </main>
+
   <footer>
     <p>© 2025 Haroon Shahbaz</p>
   </footer>

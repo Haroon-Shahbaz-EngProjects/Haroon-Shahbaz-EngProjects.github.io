@@ -3,32 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Work Experience</title>
+  <title>Experience</title>
   <link rel="stylesheet" href="style.css">
+  
   <style>
     .wrap{max-width:1000px;margin:32px auto;padding:0 16px;}
-    .xp-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin:18px 0;overflow:hidden;}
-    .xp-head{padding:16px 18px;border-bottom:1px solid #f1f5f9;}
-    .xp-head h2{margin:0;font-size:1.25rem;}
-    .meta{display:flex;gap:12px;color:#6b7280;font-size:.95rem;margin-top:6px;flex-wrap:wrap;}
-    .xp-body{padding:16px 18px;line-height:1.6;}
+    .xp-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.35);margin:18px 0;overflow:hidden;}
+    .xp-head{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.06);}
+    .xp-head h2{margin:0;font-size:1.25rem;color:var(--text);}
+    .meta{display:flex;gap:12px;color:var(--muted);font-size:.95rem;margin-top:6px;flex-wrap:wrap;}
+    .xp-body{padding:16px 18px;line-height:1.65;}
+    .xp-body p{color:#d8d9de;}
     .xp-body ul{margin:0 0 12px 20px;}
-    .tools{color:#6b7280;font-size:.95rem;}
-    header h1{padding:16px;}
+    .xp-body li{color:#d8d9de;margin-bottom:6px;}
+    .tools{color:var(--muted);font-size:.95rem;}
   </style>
+
 </head>
 <body>
+  
   <header>
-    <h1>Work Experience</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="experience.html" aria-current="page">Experience</a>
-      <a href="resume.html">Resume</a>
-    </nav>
+    <div class="nav container">
+      <div class="brand">Haroon<span class="dot">.</span></div>
+      <nav>
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About</a>
+        <a href="skills.html" >Skills</a>
+        <a href="projects.html" >Projects</a>
+        <a href="experience.html" aria-current="page">Experience</a>
+        <a href="resume.html" >Resume</a>
+      </nav>
+    </div>
   </header>
+
 
   <main class="wrap">
     <section>
@@ -37,7 +44,7 @@
         <div class="xp-head">
           <h2>Software Engineer — Rust, Golang, Linux, Wazuh</h2>
           <div class="meta">
-            <span>Arctic Wolf · Waterloo, ON</span>
+            <span>ARCTiC WOLF · Waterloo, ON</span>
             <span>May 2025 — Dec 2025</span>
           </div>
         </div>
@@ -58,7 +65,7 @@
         <div class="xp-head">
           <h2>Security Engineer — SIEM (Splunk, Sigma), Python, YAML, Sysmon</h2>
           <div class="meta">
-            <span>Arctic Wolf · Waterloo, ON</span>
+            <span>ARCTiC WOLF · Waterloo, ON</span>
             <span>Jan 2024 — Sep 2024</span>
           </div>
         </div>
